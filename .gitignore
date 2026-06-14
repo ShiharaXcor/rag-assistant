@@ -1,0 +1,72 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# ===== Environment Variables =====
+.env
+.env.local
+.env.example
+
+# ===== VS Code =====
+.vscode/
+*.code-workspace
+
+# ===== Jupyter Notebooks =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===== Vector Store & Model Data =====
+backend/data/
+*.faiss
+*.pkl
+*.index
+chroma_db/
+
+# ===== HuggingFace Cache =====
+.cache/
+models/
+
+# ===== Node / React =====
+node_modules/
+frontend/build/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== Docker =====
+docker-data/
+
+# ===== OS Files =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Logs =====
+*.log
+logs/
+
+# Environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Vector Store data
+backend/data/
+*.faiss
+*.pkl
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
