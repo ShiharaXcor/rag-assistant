@@ -1,0 +1,32 @@
+# API Framework
+fastapi==0.115.0
+uvicorn==0.32.0
+
+
+# LangChain
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-huggingface==0.1.2
+
+# PDF Processing
+pymupdf==1.24.11
+pypdf==5.1.0
+
+# Embeddings & Vector Store
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0
+chromadb==0.5.20
+
+# HuggingFace
+huggingface-hub==0.26.2
+transformers==4.46.3
+
+# Security & Filtering
+better-profanity==0.7.0
+python-multipart==0.0.12
+
+# Utilities
+python-dotenv==1.0.1
+pydantic==2.10.1
+pydantic-settings==2.6.1
+numpy==1.26.4
