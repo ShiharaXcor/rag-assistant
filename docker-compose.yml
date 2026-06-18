@@ -1,0 +1,46 @@
+
+
+services:
+
+  # ── Backend ─────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: rag-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/vectorstore:/app/vectorstore
+      - ./backend/data:/app/data
+    env_file:
+      - ./.env
+    restart: unless-stopped
+    networks:
+      - rag-network
+
+  # ── Frontend ─────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rag-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - rag-network
+
+# ── Network ───────────────────────────────
+networks:
+  rag-network:
+    driver: bridge
+
+# ── Volumes ───────────────────────────────
+volumes:
+  uploads:
+  vectorstore:
+  data:
